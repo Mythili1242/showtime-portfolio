@@ -1,0 +1,20 @@
+.bgimage{
+    background-image: url("../../../assets/bgimage.png");
+    height: 85vh;
+    position: relative;
+    display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+
+}
+.mask{
+background: rgba(65, 62, 62, 0.8);
+}
+
+h2{
+    color: #e50914;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: large;
+   
+}

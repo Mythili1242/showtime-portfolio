@@ -1,0 +1,37 @@
+<div class="container mt-3">
+<div class="row p-3">
+    <div class="col-lg-2" *ngIf="getMovieDetailResult.poster_path">
+        <img src="http://image.tmdb.org/t/p/original/{{ getMovieDetailResult.poster_path }}">
+    </div>
+<div class="col-lg-10 mt-5 p-4">
+<h1 class="mt-2 mb-2" >{{getMovieDetailResult.original_title}}</h1>
+<p class="mt-3 mb-3">{{getMovieDetailResult.overview}}</p>
+<a class="btn btn-md" href="https://www.themoviedb.org/video/play?key={{getMovieVideoResult}}" target="_blank" >Watch Trailer</a>
+<!-- <button class="btn btn-md" (click)="openVideo()">Watch Trailer</button>
+<div *ngIf="showVideo">
+  <iframe [src]="videoUrl" width="800" height="600" frameborder="0" allowfullscreen   ></iframe> -->
+  <!-- <iframe [src]="videoUrl" [style.width.px]="iframeWidth" [style.height.px]="iframeHeight" frameborder="0" allowfullscreen ></iframe>
+
+</div> -->
+
+<div class="mt-4 p-4">
+    <h2 class="text-white">Top Cast</h2>
+    <div class="row">
+    <div class="col-lg-4" *ngFor="let c of getMovieCastResult">
+        <div class="row mt-2 mb-2">
+            <div class="col-lg-2" >
+                <img src="http://image.tmdb.org/t/p/original/{{ c.profile_path }}">
+            </div>
+            <div class="col-lg-10">
+                <h3 class="text-white">{{c.original_name}}</h3>
+                <p class="text-white">{{c.character}}</p>
+            </div>
+        </div>
+           
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+</div>
